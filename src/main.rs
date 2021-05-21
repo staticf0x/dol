@@ -20,6 +20,4 @@ fn main() {
         .attach(TestDbConn::fairing())
         .mount("/", routes![index::ping::ping, index::ping::hello, users::list_users, users::get_user])
         .launch();
-
-    dotenv::dotenv().ok();
 }
